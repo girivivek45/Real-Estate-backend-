@@ -19,7 +19,8 @@ export const register = async (req,res) =>{
     console.log(newUser);
     res.status(201).json({message:"User created successfully"});
 }catch(err){
-    res.status(500).json({messgae:"Failed to create"});
+    console.log(err);
+    res.status(500).json({message:"Failed to create user"});
 }
 };
 export const login = async (req,res) =>{
